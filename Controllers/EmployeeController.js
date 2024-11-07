@@ -17,7 +17,7 @@ const createEmployee = async (req, res) => {
     } catch (err) {
         console.log('Error ', err);
         res.status(500).json({
-            message: 'Internal Server Error',
+            message: 'Email Already Exists please try using diffrent Email',
             success: false,
             error: err
         })

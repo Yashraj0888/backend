@@ -26,6 +26,15 @@ const EmployeeSchema = new Schema({
         type: Number,
         required: true
     },
+    gender: {
+        type: String,
+        enum: ['Male', 'Female', 'Other'],  // You can add more options if necessary
+        required: true
+    },
+    course: {
+        type: String,
+        required: true
+    },
     createdAt: {
         type: Date,
         default: new Date()
@@ -38,4 +47,3 @@ const EmployeeSchema = new Schema({
 
 const EmployeeModel = mongoose.model('employees', EmployeeSchema);
 module.exports = EmployeeModel;
-
