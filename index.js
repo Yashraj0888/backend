@@ -25,8 +25,8 @@ app.use(session({
 
 const createAdmin = async () => {
   const admin = new Login({
-    username: 'admin', // Hardcoded admin username
-    password: 'adminpassword', // Hardcoded admin password (consider hashing in production)
+    username: process.env.username, // Hardcoded admin username
+    password: process.env.password, // Hardcoded admin password (consider hashing in production)
   });
 
   try {
